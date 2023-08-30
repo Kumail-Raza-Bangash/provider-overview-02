@@ -94,6 +94,9 @@ class _AgeState extends State<Age> {
           mainAxisSize: MainAxisSize.min,
           children: [
              Text('- age: ${Provider.of<Dog>(context).age}', style: const TextStyle(fontSize: 20.0,),),
+             const SizedBox(height: 20.0,),
+              ElevatedButton(onPressed: () => Provider.of<Dog>(context, listen: false).grow() , child: const Text('Grow', style:  TextStyle(fontSize: 20.0,),),),
+
           ],
         ),
     );
